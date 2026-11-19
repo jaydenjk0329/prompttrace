@@ -1,15 +1,46 @@
 {
-  "name": "prompttrace",
+  "name": "prompt-trace",
   "version": "0.1.0",
-  "description": "Trace which coding-agent prompt produced which code change. Hooks for Claude Code & Codex, MCP server for querying.",
+  "description": "git blame for prompts: trace which coding-agent prompt (Claude Code, Codex) produced which code change, and share it with your team via git notes.",
+  "keywords": [
+    "claude-code",
+    "codex",
+    "mcp",
+    "mcp-server",
+    "ai-agents",
+    "git-blame",
+    "prompts",
+    "provenance",
+    "git-notes"
+  ],
+  "author": "Jayden Kim",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaydenjk0329/prompttrace.git"
+  },
+  "homepage": "https://github.com/jaydenjk0329/prompttrace#readme",
+  "bugs": {
+    "url": "https://github.com/jaydenjk0329/prompttrace/issues"
+  },
   "type": "module",
-  "bin": { "prompttrace": "dist/cli.js" },
-  "files": ["dist", "skill", "README.md"],
-  "engines": { "node": ">=22.13" },
+  "bin": {
+    "prompttrace": "dist/cli.js"
+  },
+  "files": [
+    "dist/**/*.js",
+    "skill",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
     "test": "vitest run",
-    "dev": "tsc -p tsconfig.json --watch"
+    "dev": "tsc -p tsconfig.json --watch",
+    "prepublishOnly": "npm run build && npm test"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.20.0",
@@ -20,6 +51,5 @@
     "@types/node": "^24.0.0",
     "typescript": "^5.9.0",
     "vitest": "^3.2.0"
-  },
-  "license": "MIT"
+  }
 }

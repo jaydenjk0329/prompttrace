@@ -23,7 +23,7 @@ src/math.ts:6    return a * b;
 ## Setup
 
 ```sh
-npm install -g prompttrace        # Node >= 22.13
+npm install -g prompt-trace       # Node >= 22.13 — installs the `prompttrace` command
 cd your-repo
 prompttrace install               # Claude Code + Codex + git hooks
 ```
