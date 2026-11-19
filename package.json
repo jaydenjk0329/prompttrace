@@ -1,5 +1,5 @@
 {
-  "name": "prompt-trace",
+  "name": "agent-blame",
   "version": "0.1.0",
   "description": "git blame for prompts: trace which coding-agent prompt (Claude Code, Codex) produced which code change, and share it with your team via git notes.",
   "keywords": [
@@ -25,7 +25,8 @@
   },
   "type": "module",
   "bin": {
-    "prompttrace": "dist/cli.js"
+    "prompttrace": "dist/cli.js",
+    "agent-blame": "dist/cli.js"
   },
   "files": [
     "dist/**/*.js",
