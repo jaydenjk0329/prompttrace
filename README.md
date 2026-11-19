@@ -23,8 +23,8 @@ src/math.ts:6    return a * b;
 ## Setup
 
 ```sh
-npm install -g agent-blame        # Node >= 22.13 — installs the `prompttrace` command
-                                  # (or one-off: npx agent-blame install)
+npm install -g @jaydenjk0329/prompt-trace   # Node >= 22.13 — installs the `prompttrace` command
+                                            # (or one-off: npx @jaydenjk0329/prompt-trace install)
 cd your-repo
 prompttrace install               # Claude Code + Codex + git hooks
 ```
